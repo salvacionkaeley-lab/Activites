@@ -4,6 +4,8 @@
 
 package com.mycompany.week1_data_types_and_variables;
 
+import java.util.Scanner;
+
 /**
  *
  * @author kathe
@@ -11,7 +13,15 @@ package com.mycompany.week1_data_types_and_variables;
 public class Week3_Control_Flow_Part1 {
 
         public static void main(String[] args) {
+        simpleGradeClassifier();
+        System.out.println();
+        multiTierDiscountSystem();
+        System.out.println();
+    }
+
+    public static void simpleGradeClassifier() {
         System.out.println("==========Simple_Grade_Classifier==========");
+        
         int score = 75;
         
         System.out.println("Score: " + score);
@@ -32,10 +42,10 @@ public class Week3_Control_Flow_Part1 {
             System.out.println("FAILED");
         }
     }
-}
 
-    public static void main(String[] args) {
+    public static void multiTierDiscountSystem() {
         System.out.println("==========MultiTier_Discount_System==========");
+        
         double purchaseAmount = 250.00;
         double discountPercentage;
         double finalPrice;
@@ -57,28 +67,24 @@ public class Week3_Control_Flow_Part1 {
         System.out.println("Final Price after Discount: " + finalPrice);
     }
 
-    public static void main(String[] args) {
+    public static void nestedLoginValidator() {
         System.out.println("==========Nested_Login_Validator==========");
         
         Scanner scanner = new Scanner(System.in);
 
-        // Predefined credentials
         String correctUsername = "Kaeley";
         String correctPassword = "K@3l3y";
-        boolean isAccountLocked = false; // Change to true to simulate a locked account
-
-        // User input
+        boolean isAccountLocked = false;
+        
         System.out.print("Enter username: ");
         String username = scanner.nextLine();
 
-        // First stage: Validate username
         if (username.equals(correctUsername)) {
             System.out.print("Enter password: ");
             String password = scanner.nextLine();
 
-            // Second stage: Validate password
             if (password.equals(correctPassword)) {
-                // Third stage: Check if account is locked
+
                 if (!isAccountLocked) {
                     System.out.println("Login successful!");
                 } else {
@@ -94,7 +100,7 @@ public class Week3_Control_Flow_Part1 {
         scanner.close();
     }
 
-    public static void main(String[] args) {
+    public static void atmTransactionAuthorizer() {
         System.out.println("==========ATM_Transaction_Autjorizer==========");
         
         Scanner scanner = new Scanner(System.in);
@@ -150,4 +156,4 @@ public class Week3_Control_Flow_Part1 {
 
         scanner.close();
     }
-
+}

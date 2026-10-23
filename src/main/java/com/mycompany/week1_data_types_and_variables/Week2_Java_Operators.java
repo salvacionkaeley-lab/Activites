@@ -9,6 +9,7 @@ package com.mycompany.week1_data_types_and_variables;
  * @author kathe
  */
 public class Week2_Java_Operators {
+    
         public static void main(String[] args) {
         System.out.println("==========Four-Function Calculator==========");
         int num1 = 15;
@@ -23,10 +24,16 @@ public class Week2_Java_Operators {
         /* EXPLANATION: The modulo operator (%) behaves differently with negative operands because 
         the result takes the sign of the dividend (the first operand). 
         For example, -15 % 4 gives -3, while 15 % -4 gives 3. */
-    }
-}
 
-    public static void main(String[] args) {
+        System.out.println();
+        gradeThresholdChecker();
+        System.out.println();
+        compoundGrowthTracker();
+        System.out.println();
+        precedencePuzzleSolver();
+    }
+
+    public static void gradeThresholdChecker() {
         System.out.println("==========Grade Threshold Checker==========");
         System.out.println("==========Grade Threshold Checker==========");
         double averageGrade = 90.5;
@@ -47,7 +54,7 @@ public class Week2_Java_Operators {
         }
     }
 
-    public static void main(String[] args) {
+    public static void compoundGrowthTracker() {
         System.out.println("==========Compound Growth and Increment Tracker==========");
         
         double balance = 5000.0;
@@ -75,26 +82,26 @@ public class Week2_Java_Operators {
 
         /* EXPLANATION:
          - Postfix (count++): Uses the current value first inside the print statement, 
-         then increases it afterward. That's why it printed 5 before becoming 6.
+           then increases it afterward. That's why it printed 5 before becoming 6.
          - Prefix (++count): Increases the value first, then uses the updated value 
-         in the print statement. That's why it printed 6 immediately.
+           in the print statement. That's why it printed 6 immediately.
          */
     }
 
-    public static void main(String[] args) {
+    public static void precedencePuzzleSolver() {
         System.out.println("==========Precedence Puzzle Solver==========");
         
         /* Expression 1
-        *  Predicted result: 1 (because 5 > 3 is true, which is 1 in Java)
-        *  Actual result: 7 */
+         *  Predicted result: 1 (because 5 > 3 is true, which is 1 in Java)
+         *  Actual result: 7 */
         int result1 = (5 > 3 ? 1 : 0) + 2 * 3;
         System.out.println("Expression 1 Result: " + result1);
         /* Follow-up: I forgot that multiplication has higher priority than addition and the ternary operator, 
            so it did the multiplication first. */
 
         /* Expression 2
-        *  Predicted result: 0 (because 5 < 3 is false, which is 0 in Java)
-        *  Actual result: 0 */
+         *  Predicted result: 0 (because 5 < 3 is false, which is 0 in Java)
+         *  Actual result: 0 */
         int result2 = ((5 < 3 ? 1 : 0) == 0 && 2 > 1) ? 1 : 0;
         System.out.println("Expression 2 Result: " + result2); 
         /* Follow-up: because (5 < 3 ? 1 : 0) resulted in 0, but then the check `== 0` turned it into true. 
@@ -109,4 +116,4 @@ public class Week2_Java_Operators {
         /* Follow-up: I forgot that increment and decrement operators modify 
            the variable right in the middle of the expression, causing 'a' to change mid-calculation. */
     }
-
+}
