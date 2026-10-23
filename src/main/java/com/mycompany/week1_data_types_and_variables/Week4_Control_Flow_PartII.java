@@ -8,10 +8,16 @@ package com.mycompany.week1_data_types_and_variables;
  *
  * @author kathe
  */
+import java.util.Scanner;
+
 public class Week4_Control_Flow_PartII {
 
+    private static final int CRITICAL_LOW_THRESHOLD = 5;
+    private static final int ROWS = 4;
+    private static final int SHELVES = 4;
+
     public static void main(String[] args) {
-        System.out.println("==========Number& Square Printer==========");
+        System.out.println("==========Number & Square Printer==========");
         
         System.out.println("Number and its Square from 1 to 10:");
         for (int i = 1; i <= 10; i++) {
@@ -22,10 +28,16 @@ public class Week4_Control_Flow_PartII {
         for (int i = 1; i <= 20; i++) {
             System.out.println("Number: " + i + ", Square: " + (i * i));
         }
-    }
-}
 
-    public static void SumUntilSentinel() {
+        System.out.println();
+        sumUntilSentinel();
+        System.out.println();
+        patternGenerator();
+        System.out.println();
+        // warehouseInventoryScanner(); // Uncomment to run interactive warehouse inventory
+    }
+
+    public static void sumUntilSentinel() {
         System.out.println("==========Sum Until Sentinel Value==========");
         
         Scanner scanner = new Scanner(System.in);
@@ -47,24 +59,32 @@ public class Week4_Control_Flow_PartII {
         System.out.println("The total sum is: " + total);
         scanner.close();
     }
-}
 
+    public static void patternGenerator() {
+        System.out.println("==========Pattern Generator With Early Exit==========");
 
+        int size = 5;
+        
+        for (int i = 1; i <= size; i++) {
+        
+            for (int j = 1; j <= size; j++) {
+        
+                if (i == 5 && j == 2) {
+                    continue;
+                }
+        
+                if (j > i) {
+                    break;
+                }
+            
+                System.out.print("* ");
+            }
+            
+            System.out.println();
+        }
+    }
 
-
-
-
-
-
-
-
-import java.util.Scanner;
-
-    private static final int CRITICAL_LOW_THRESHOLD = 5;
-    private static final int ROWS = 4;
-    private static final int SHELVES = 4;
-
-    public static void main(String[] args) {
+    public static void warehouseInventoryScanner() {
         System.out.println("==========Warehouse Inventory Scanner==========");
         
         int[][] inventory = {
@@ -166,8 +186,5 @@ import java.util.Scanner;
         int amount = scanner.nextInt();
         inventory[row][col] += amount;
         System.out.println("Shelf (" + row + ", " + col + ") restocked successfully. New count: " + inventory[row][col]);
-        
-        return;
     }
 }
-
