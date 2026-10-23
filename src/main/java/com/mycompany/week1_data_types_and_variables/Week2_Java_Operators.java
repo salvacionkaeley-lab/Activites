@@ -28,6 +28,7 @@ public class Week2_Java_Operators {
 
     public static void main(String[] args) {
         System.out.println("==========Grade Threshold Checker==========");
+        System.out.println("==========Grade Threshold Checker==========");
         double averageGrade = 90.5;
         int absences = 0;
 
