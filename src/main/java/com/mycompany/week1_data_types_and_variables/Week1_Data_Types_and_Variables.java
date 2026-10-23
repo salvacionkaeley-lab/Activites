@@ -10,10 +10,10 @@ package com.mycompany.week1_data_types_and_variables;
  */
 public class Week1_Data_Types_and_Variables {
 
-    public static void main(String[] args) {
-    System.out.println("==========Personal Profile Printer==========");
-    
-       String fullname = "Kaeley Stace Salvacion";
+public static void main(String[] args) {
+        System.out.println("==========Personal Profile Printer==========");
+        
+        String fullname = "Kaeley Stace Salvacion";
         
         int age = 19;
         double height = 5.0;
@@ -26,10 +26,16 @@ public class Week1_Data_Types_and_Variables {
         System.out.println("Initial: " + initial);
         System.out.println("Student Status: " + studentstatus);
         
+        System.out.println();
+        shoppingCalculator();
+        System.out.println();
+        unitCastingConverter();
+        System.out.println();
+        overflowInvestigator();
     }
-}
-    public static void main(String[] args) {
-    System.out.println("==========Type Safe Shopping Calculator==========");
+
+    public static void shoppingCalculator() {
+        System.out.println("==========Type Safe Shopping Calculator==========");
         
         int quantity = 5; 
         double unitPrice = 19.50; 
@@ -46,8 +52,8 @@ public class Week1_Data_Types_and_Variables {
         Using a double is better so we don't lose any money or precision when figuring out the final price.*/
     }
 
-    public static void main(String[] args) {
-    System.out.println("==========Unit Casting Converter==========");
+    public static void unitCastingConverter() {
+        System.out.println("==========Unit Casting Converter==========");
         double centimeters = 700.10; 
         
         int meters = (int) (centimeters / 100); 
@@ -67,8 +73,8 @@ public class Week1_Data_Types_and_Variables {
         /*Explicit cast is required, the decimal portion (.10) is dropped and lost, converting 7.10 down to 7.*/
     }
 
-    public static void main(String[] args) {
-    System.out.println("==========Overflow & Reference Investigator==========");
+    public static void overflowInvestigator() {
+        System.out.println("==========Overflow & Reference Investigator==========");
     
         byte b = 127;
         System.out.println("Original byte value: " + b);
@@ -97,10 +103,5 @@ public class Week1_Data_Types_and_Variables {
         System.out.println("Original array: " + sharedArray[0]);
         anotherReference[0] = 99;
         System.out.println("Modified array: " + sharedArray[0]);
-        
-        
     }
-
-
-
-
+}
