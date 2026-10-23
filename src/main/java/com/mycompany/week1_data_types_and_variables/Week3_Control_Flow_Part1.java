@@ -17,6 +17,7 @@ public class Week3_Control_Flow_Part1 {
         System.out.println();
         multiTierDiscountSystem();
         System.out.println();
+        
     }
 
     public static void simpleGradeClassifier() {
